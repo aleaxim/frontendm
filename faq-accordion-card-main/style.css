@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Kumbh Sans, sans-serif;
+}
+
+html {
+    background:hsl(228, 45%, 44%);
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*To have the gradient fill the viewport, give the <html> element a min-height of 100%; Commented code works too */
+    /* background-attachment: fixed; */
+    min-height: 100%;
+}
+
+p {
+    font-size: 12px;
+    color: hsl(240, 6%, 50%);
+}
+
+hr {
+    color: hsl(240, 5%, 91%);
+    background-color: hsl(240, 5%, 91%);
+}
+
+.container{
+    width: 70%;
+    margin: 5em auto;
+    background-color: #ffff;
+    border-radius: 3rem;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+.illus, .faq{
+    width: 50%;
+}
+
+/*pano lalakihan yung image ng nakaclip lang siya */
+.illus .bg-pattern{
+    width: 100%;
+    /* object-fit: contain; */
+    object-position: -10em 2em;
+}
+
+
+.faq .faq-header{
+    color: hsl(238, 29%, 16%);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0.5em 0;
+}
+
+.dropdowns{
+    margin-right: 2em;
+}
+
+.dropdowns .collapsible{
+    color: hsl(238, 29%, 16%);
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    width: 100%;
+    background-color: #fff;
+}
+
+.collapsible:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background: white url("./images/icon-arrow-down.svg")no-repeat 10px 5px;
+    position: absolute;
+    display: inline-block; 
+}
+
+
+.dropdowns .collapsible.selected{
+    font-weight: 700;
+}
+
+.dropdowns .collapsible:hover {
+    color:hsl(14, 88%, 65%);
+}
+
+.content{
+    padding: 16px 0;
+    display: none;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

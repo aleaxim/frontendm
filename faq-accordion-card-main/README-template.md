@@ -90,9 +90,32 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-### Useful resources
+### References
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Filled Background](https://stackoverflow.com/questions/16841323/making-gradient-background-fill-page-with-css/16841457) - For filling the whole page with a gradient background.
+
+- [Collapsible](https://www.w3schools.com/howto/howto_js_collapsible.asp) - For creating the collapsible section.
+
+- [Grid vs Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout) - A read about the uses of css grid and flexbox.
+
+- [Style in Active state](https://stackoverflow.com/questions/23661927/keep-button-in-active-state-until-clicked-upon-again) - For keeping a button in active state until clicked upon again. 
+
+- [Object-position](https://developer.mozilla.org/en-US/docs/Web/CSS/object-position) - For specifiying an object's position within a container. 
+
+- [Half Half](https://stackoverflow.com/questions/33393544/how-can-i-make-a-half-half-layout-with-some-text-using-display-flex/33393800) - For equally dividing a flexbox into half.
+
+- [Center a Div](https://css-tricks.com/centering-css-complete-guide/) - Used in centering a flexbox.
+
+- [Auto-rezied Image](https://stackoverflow.com/questions/3029422/how-do-i-auto-resize-an-image-to-fit-a-div-container) - For auto resizing an image to fix a div container.
+
+hmmm
+https://stackoverflow.com/questions/14695365/css-background-image-in-after-element
+also how to use the ch unit
+
+how to enlarge an image without overflowing 
+
+
+This helped me for XYZ reason. I really liked this pattern and will use it going forward.
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
