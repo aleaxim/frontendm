@@ -16,6 +16,14 @@ html {
     min-height: 100%;
 }
 
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 p {
     font-size: 12px;
     color: hsl(240, 6%, 50%);
@@ -30,28 +38,80 @@ hr {
 }
 
 .container{
-    width: 70%;
-    margin: 5em auto;
+    width: 900px;
     background-color: #ffff;
-    border-radius: 3rem;
-    overflow: hidden;
+    border-radius: 1.5rem;
+    /* overflow: hidden; */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2em;
+   
 }
-
 
 .illus, .faq{
     width: 50%;
 }
 
-/*pano lalakihan yung image ng nakaclip lang siya */
-.illus .bg-pattern{
-    width: 100%;
-    /* object-fit: contain; */
-    object-position: -10em 2em;
+.illus{
+    overflow: hidden;
 }
 
+.box {
+    position: relative;
+}
+
+.box .box-desktop{
+    position: absolute;
+    left: -7.3em;
+    top: -2em;
+    z-index: 1;
+}
+
+.illus .wm-desktop{
+    position: relative;
+    
+}
+
+.illus .wm-desktop .wm{
+    position: absolute;
+    right: 2.4em;
+    top: 5em;
+    /* width: 99%; */
+}
+
+.illus .wm-mobile .wm-mb{
+    width: 250px;
+    margin-left: -2.6em;
+    margin-top: -7em;
+}
+
+
+.illus .shadow-mobile .shadow-mb{
+     margin-top: -4.6em;
+}
+
+.illus .bg{
+     height:500px;
+     
+     /* overflow: hidden; */
+}
+
+.illus .bg .bg-pattern{
+    height: 950px;
+    /* width: 100%;
+    /* max-width: 100%;
+    height: auto;
+    /* max-height: 100%; */
+    /* width: auto;
+    object-fit: contain; */
+    
+    object-position: -37em -18em; 
+}
+
+.faq{
+    margin: 2em;
+}
 
 .faq .faq-header{
     color: hsl(238, 29%, 16%);
@@ -61,7 +121,7 @@ hr {
 }
 
 .dropdowns{
-    width: 70%;
+    width: 90%;
 }
 
 .dropdowns .collapsible{
@@ -104,7 +164,43 @@ hr {
     overflow: hidden;
 }
 
+.hidden {display: none;}
+.visible {display: block;}
 
+@media (max-width: 900px){
+    .container{
+        width: 320px;
+        flex-direction: column;
+    }
+
+    .visible {display: none;}
+    .hidden {display: block;}
+    
+    .faq .faq-header{
+        text-align: center;
+        margin: 0 0 1em 0;
+    }
+
+    .faq{
+        width: 85%;
+        margin: 1.5em 1.5em 2.5em 1.5em;
+    }
+
+    .dropdowns{
+        width: 100%;
+    }
+
+    .illus{
+        overflow: visible;
+    }
+
+    .illus .shadow-mobile {
+        display:flex;
+        justify-content: center;
+    }
+
+
+}
 
 
 
