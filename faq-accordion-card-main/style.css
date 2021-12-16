@@ -9,7 +9,7 @@
 html {
     background:hsl(228, 45%, 44%);
     background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     background-size: cover;
     /*To have the gradient fill the viewport, give the <html> element a min-height of 100%; Commented code works too */
     /* background-attachment: fixed; */
@@ -41,12 +41,11 @@ hr {
     width: 900px;
     background-color: #ffff;
     border-radius: 1.5rem;
-    /* overflow: hidden; */
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 2em;
-   
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
 }
 
 .illus, .faq{
@@ -55,7 +54,10 @@ hr {
 
 .illus{
     overflow: hidden;
+    height: 100%;
 }
+
+/* Illustrations for Desktop */
 
 .box {
     position: relative;
@@ -77,8 +79,9 @@ hr {
     position: absolute;
     right: 2.4em;
     top: 5em;
-    /* width: 99%; */
 }
+
+/* Illustrations for Mobile */
 
 .illus .wm-mobile .wm-mb{
     width: 250px;
@@ -86,28 +89,22 @@ hr {
     margin-top: -7em;
 }
 
-
 .illus .shadow-mobile .shadow-mb{
      margin-top: -4.6em;
 }
 
 .illus .bg{
-     height:500px;
-     
-     /* overflow: hidden; */
+     height: 500px;
+     max-height: 600px;
 }
 
 .illus .bg .bg-pattern{
     height: 950px;
-    /* width: 100%;
-    /* max-width: 100%;
-    height: auto;
-    /* max-height: 100%; */
-    /* width: auto;
-    object-fit: contain; */
-    
+    /* object-fit: contain; */
     object-position: -37em -18em; 
 }
+
+/* FAQ */
 
 .faq{
     margin: 2em;
@@ -131,7 +128,7 @@ hr {
     text-align: left;
     outline: none;
     width: 100%;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0);
 }
 
 .collapsible:after {
@@ -149,7 +146,6 @@ hr {
      transform: rotate(180deg);
 }
 
-
 .dropdowns .collapsible.selected{
     font-weight: 700;
 }
@@ -166,6 +162,8 @@ hr {
 
 .hidden {display: none;}
 .visible {display: block;}
+
+/* MOBILE VIEW */
 
 @media (max-width: 900px){
     .container{
@@ -198,19 +196,7 @@ hr {
         display:flex;
         justify-content: center;
     }
-
-
 }
 
-
-
-
-
-
-
-
-
-
-
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center;}
 .attribution a { color: hsl(228, 45%, 44%); }
