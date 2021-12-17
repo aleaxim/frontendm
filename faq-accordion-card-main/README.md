@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site: [FAQ Accordion](https://aleaxim-faq-accordion.netlify.app/)
 
 ## My process
 
@@ -43,7 +43,7 @@ Users should be able to:
 
 - HTML5 markup
 - CSS custom properties
-- JS, Jquery
+- JS, JQuery
 - Flexbox
 - Media Query 
 
@@ -74,7 +74,7 @@ Users should be able to:
 
 - [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - For using the CSS flexbox.
 
-- [](https://css-tricks.com/almanac/properties/m/min-height/) - Gave an idea on how to enlarge an image but cropped on a certain size.
+- [Min-height](https://css-tricks.com/almanac/properties/m/min-height/) - Gave an idea on how to enlarge an image but cropped on a certain size.
 
 ## Author
 
