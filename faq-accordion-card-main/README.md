@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site: [FAQ Accordion](https://aleaxim-faq-accordion.netlify.app/)
+- Live Site: [FAQ Accordion](https://aleaxim.github.io/frontendm/faq-accordion-card/)
 
 ## My process
 
