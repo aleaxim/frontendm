@@ -1,39 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  Features
-  Company
-  Careers
-  About
+    <link rel="stylesheet" href="dist/main.css" />
+  </head>
+  <body
+    class="container mx-auto h-screen font-epilogue font-medium md:text-lg text-gray-dark bg-zinc-50"
+  >
+    <!-- Navbar -->
+    <nav class="pt-7 font-base">
+      <!-- Logo -->
+      <div class="px-4 md:pr-16 md:pl-0 float-left"><img src="/src/assets/logo.svg" /></div>
+      <div class="flex items-center justify-between">
+        <!-- Nav Items -->
+        <div class="hidden md:flex space-x-10">
+          <a
+            href="#"
+            class="after:content-arrowDownIcon after:inline after:w-full after:h-full items-center hover:after:content-arrowUpIcon hover:text-black"
+          >
+            Features
+          </a>
+          <a href="#" class="hover:text-black">Company</a>
+          <a href="#" class="hover:text-black">Careers</a>
+          <a href="#" class="hover:text-black">About</a>
+        </div>
+        <div class="hidden md:block space-x-10">
+          <a href="javascript:void()" class="hover:text-black">Login</a>
+          <a
+            href="javascript:void()"
+            class="rounded-xlg border-2 border-gray-dark p-2 px-6 hover:text-black hover:border-black"
+            >Register</a
+          >
+        </div>
+      </div>
+    </nav>
 
-  Login
-  Register
+    <main>
+      <div class="container flex flex-col-reverse md:flex-row items-center mx-auto mt-10">
+        <!-- Left Side -->
+        <div class="text-center md:text-left w-1/2">
+          <h1 class="font-bold text-4xl md:text-7xl mt-10 mb-4 md:mb-14 text-black">
+            <span class="block">Make</span> remote work
+          </h1>
+          <p class="max-w-sm">
+            Get your team in sync, no matter your location. Streamline processes, create team
+            rituals, and watch productivity soar.
+          </p>
 
-  Make remote work
+          <button
+            class="rounded-xlg p-3 px-8 font-bold bg-black text-zinc-50 mt-6 mb-10 md:mt-12 md:mb-24 hover:bg-zinc-50 hover:border hover:border-black hover:text-black"
+          >
+            Learn more
+          </button>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+          <!-- Clients -->
+          <div class="grid grid-cols-4 place-items-center md:place-items-start">
+            <img class="w-auto h-4" src="/src/assets/client-databiz.svg" />
+            <img class="w-auto h-4" src="/src/assets/client-audiophile.svg" />
+            <img class="w-auto h-4" src="/src/assets/client-meet.svg" />
+            <img class="w-auto h-4" src="/src/assets/client-maker.svg" />
+          </div>
+        </div>
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+        <div class="space-y-0 w-1/2">
+          <img class="hidden md:block max-w-xl" src="/src/assets/image-hero-desktop.png" />
+          <img class="md:hidden" src="/src/assets/image-hero-mobile.png" />
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
+
+<!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/aleaxim/" target="_blank">aleaxim</a>.
+    </div> -->

@@ -11,17 +11,17 @@ The designs were created to the following widths:
 
 ### Neutral
 
-- Almost White: hsl(0, 0%, 98%)
-- Medium Gray: hsl(0, 0%, 41%)
-- Almost Black: hsl(0, 0%, 8%)
+- Almost White: hsl(0, 0%, 98%) / neutral-50
+- Medium Gray: hsl(0, 0%, 41%) / medGray
+- Almost Black: hsl(0, 0%, 8%) / black
 
 ## Typography
 
 ### Body Copy
 
-- Font size (paragraph): 18px
+- Font size (paragraph): 18px / text-lg
 
 ### Font
 
 - Family: [Epilogue](https://fonts.google.com/specimen/Epilogue)
-- Weights: 500, 700
+- Weights: 500, 700 // font-medium font-bold
