@@ -12,18 +12,18 @@
     <link rel="stylesheet" href="dist/main.css" />
   </head>
   <body
-    class="container mx-auto h-screen font-epilogue font-medium md:text-lg text-gray-dark bg-zinc-50"
+    class="container mx-auto h-screen w-full font-epilogue font-medium lg:text-lg text-gray-dark bg-zinc-50"
   >
     <!-- Navbar -->
-    <nav class="pt-7 font-base">
+    <nav class="pt-6 font-base">
       <!-- Logo -->
-      <div class="px-4 md:pr-16 md:pl-0 float-left"><img src="/src/assets/logo.svg" /></div>
+      <div class="px-4 lg:pr-16 lg:pl-0 float-left"><img src="/src/assets/logo.svg" /></div>
       <div class="flex items-center justify-between">
         <!-- Nav Items -->
-        <div class="hidden md:flex space-x-10">
+        <div class="hidden lg:flex space-x-10">
           <a
             href="#"
-            class="after:content-arrowDownIcon after:inline after:w-full after:h-full items-center hover:after:content-arrowUpIcon hover:text-black"
+            class="after:content-arrowDownIcon after:inline after:w-full after:h-full items-center hover:after:content-arrowUpIcon hover:after:brightness-50 hover:text-black"
           >
             Features
           </a>
@@ -31,7 +31,9 @@
           <a href="#" class="hover:text-black">Careers</a>
           <a href="#" class="hover:text-black">About</a>
         </div>
-        <div class="hidden md:block space-x-10">
+
+        <!-- Buttons -->
+        <div class="hidden lg:block space-x-10">
           <a href="javascript:void()" class="hover:text-black">Login</a>
           <a
             href="javascript:void()"
@@ -39,15 +41,20 @@
             >Register</a
           >
         </div>
+
+        <!-- Hamburger Icon -->
+        <!-- <button class="lg:hidden"><img src="/src/assets/icon-menu.svg" /></button> -->
       </div>
     </nav>
 
     <main>
-      <div class="container flex flex-col-reverse md:flex-row items-center mx-auto mt-10">
+      <div
+        class="container flex flex-col-reverse lg:flex-row items-center justify-center lg:items-start lg:px-6 mt-10 mx-auto"
+      >
         <!-- Left Side -->
-        <div class="text-center md:text-left w-1/2">
-          <h1 class="font-bold text-4xl md:text-7xl mt-10 mb-4 md:mb-14 text-black">
-            <span class="block">Make</span> remote work
+        <div class="text-center lg:space-y-12 lg:text-left lg:w-1/2">
+          <h1 class="font-bold text-4xl mt-8 mb-4 lg:text-7xl lg:mt-32 text-black">
+            <span class="lg:block">Make</span> remote work
           </h1>
           <p class="max-w-sm">
             Get your team in sync, no matter your location. Streamline processes, create team
@@ -55,31 +62,34 @@
           </p>
 
           <button
-            class="rounded-xlg p-3 px-8 font-bold bg-black text-zinc-50 mt-6 mb-10 md:mt-12 md:mb-24 hover:bg-zinc-50 hover:border hover:border-black hover:text-black"
+            class="rounded-xlg p-3 px-6 font-bold bg-black text-zinc-50 mt-6 mb-10 hover:bg-zinc-50 hover:outline hover:outline-2 hover:outline-black hover:text-black lg:mt-12"
           >
             Learn more
           </button>
 
           <!-- Clients -->
-          <div class="grid grid-cols-4 place-items-center md:place-items-start">
-            <img class="w-auto h-4" src="/src/assets/client-databiz.svg" />
-            <img class="w-auto h-4" src="/src/assets/client-audiophile.svg" />
-            <img class="w-auto h-4" src="/src/assets/client-meet.svg" />
-            <img class="w-auto h-4" src="/src/assets/client-maker.svg" />
+          <div class="grid grid-cols-4 place-items-center mx-3 lg:place-items-start">
+            <img class="h-3.5 lg:scale-150" src="/src/assets/client-databiz.svg" />
+            <img class="max-w-max h-6 lg:scale-150" src="/src/assets/client-audiophile.svg" />
+            <img class="w-min h-3.5 lg:scale-150" src="/src/assets/client-meet.svg" />
+            <img class="w-min h-4 lg:scale-150" src="/src/assets/client-maker.svg" />
           </div>
         </div>
 
-        <div class="space-y-0 w-1/2">
-          <img class="hidden md:block max-w-xl" src="/src/assets/image-hero-desktop.png" />
-          <img class="md:hidden" src="/src/assets/image-hero-mobile.png" />
+        <!-- Right Side -->
+        <div class="w-full lg:w-1/2 xl:w-2/5">
+          <img class="hidden lg:block" src="/src/assets/image-hero-desktop.png" />
+
+          <div class="lg:hidden h-80 bg-cover bg-[url('/src/assets/image-hero-mobile.png')]">
+            <!-- <img class="h-80 lg:hidden bg-cover" src="/src/assets/image-hero-mobile.png" /> -->
+          </div>
         </div>
       </div>
     </main>
-  </body>
-</html>
-
-<!-- <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="https://github.com/aleaxim/" target="_blank">aleaxim</a>.
-    </div> -->
+    </footer>
+  </body>
+</html>
