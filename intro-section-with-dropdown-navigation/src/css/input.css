@@ -17,3 +17,21 @@
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+
+.icon-block img {
+  display: inline-block;
+  margin-right: 1rem;
+  width: 16px;
+}
+
+.mobnav-close {
+  transform-origin: top;
+  transform: translateY(0);
+  display: none;
+}
+
+.mobnav-show {
+  display: block;
+  transform: translateY(1);
+  transition: all 0.5s;
+}

@@ -26,7 +26,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](/src/assets/output/desktop.png)
+![](/src/assets/output/desktop-nav.png)
+
+<p float="left">
+  <img src="src/assets/output/mobile.png" width="350" />
+  <img src="src/assets/output/mobile-nav.png" width="348" /> 
+</p>
 
 ### Links
 

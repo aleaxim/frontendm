@@ -5,45 +5,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/favicon-32x32.png" />
 
     <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
     <link rel="stylesheet" href="dist/main.css" />
   </head>
   <body
-    class="container mx-auto h-screen w-full font-epilogue font-medium lg:text-lg text-gray-dark bg-zinc-50"
+    class="container mx-auto h-screen w-full font-epilogue font-medium lg:text-lg text-gray-dark bg-zinc-50 min-w-full lg:min-w-fit"
   >
     <!-- Navbar -->
-    <nav class="pt-6 font-base">
+    <nav class="pt-6 font-base flex justify-between lg:block">
       <!-- Logo -->
       <div class="px-4 lg:pr-16 lg:pl-0 float-left"><img src="/src/assets/logo.svg" /></div>
       <div class="flex items-center justify-between">
         <!-- Nav Items -->
         <div class="hidden lg:flex space-x-10">
-          <a
-            href="#"
-            class="after:content-arrowDownIcon after:inline after:w-full after:h-full items-center hover:after:content-arrowUpIcon hover:after:brightness-50 hover:text-black"
-          >
-            Features
-          </a>
-          <a href="#" class="hover:text-black">Company</a>
-          <a href="#" class="hover:text-black">Careers</a>
-          <a href="#" class="hover:text-black">About</a>
+          <div class="relative">
+            <a
+              href="javascript:void(0);"
+              onClick="toggleFeatures();"
+              class="after:content-arrowDownIcon after:inline after:w-full after:h-full items-center hover:after:content-arrowUpIcon hover:after:brightness-50 hover:text-black"
+            >
+              Features
+            </a>
+            <div
+              id="nav-features"
+              class="hidden lg:absolute top-10 -left-24 bg-zinc-50 drop-shadow-2xl rounded-xlg flex flex-col py-6 px-8 space-y-2 justify-center"
+            >
+              <a href="javascript:void(0)" class="hover:text-black"
+                ><img src="/src/assets/icon-todo.svg" class="inline-block mr-3" alt="todo" />Todo
+                List</a
+              >
+              <a href="javascript:void(0)" class="hover:text-black"
+                ><img
+                  src="/src/assets/icon-calendar.svg"
+                  class="inline-block mr-3"
+                  alt="calendar"
+                />Calendar</a
+              >
+              <a href="javascript:void(0)" class="hover:text-black"
+                ><img
+                  src="/src/assets/icon-reminders.svg"
+                  class="inline-block mr-3"
+                  alt="reminder"
+                />Reminders</a
+              >
+              <a href="javascript:void(0)" class="hover:text-black"
+                ><img
+                  src="/src/assets/icon-planning.svg"
+                  class="inline-block mr-3"
+                  alt="planning"
+                />Planning</a
+              >
+            </div>
+          </div>
+          <div class="relative">
+            <a
+              href="javascript:void(0);"
+              onClick="toggleCompany();"
+              class="after:content-arrowDownIcon after:inline after:w-full after:h-full items-center hover:after:content-arrowUpIcon hover:after:brightness-50 hover:text-black"
+            >
+              Company
+            </a>
+            <div
+              id="nav-company"
+              class="hidden lg:absolute top-10 bg-zinc-50 drop-shadow-2xl rounded-xlg flex flex-col py-6 px-8 space-y-2 w-36 justify-center"
+            >
+              <a href="javascript:void(0)" class="hover:text-black">History</a>
+              <a href="javascript:void(0)" class="hover:text-black">Our Team</a>
+              <a href="javascript:void(0)" class="hover:text-black">Blog</a>
+            </div>
+          </div>
+
+          <a href="javascript:void(0);" class="hover:text-black">Careers</a>
+          <a href="javascript:void(0);" class="hover:text-black">About</a>
         </div>
 
         <!-- Buttons -->
         <div class="hidden lg:block space-x-10">
-          <a href="javascript:void()" class="hover:text-black">Login</a>
+          <a href="javascript:void(0);" class="hover:text-black">Login</a>
           <a
-            href="javascript:void()"
+            href="javascript:void(0);"
             class="rounded-xlg border-2 border-gray-dark p-2 px-6 hover:text-black hover:border-black"
             >Register</a
           >
         </div>
 
         <!-- Hamburger Icon -->
-        <!-- <button class="lg:hidden"><img src="/src/assets/icon-menu.svg" /></button> -->
+        <button onClick="toggleHamburger();" class="lg:hidden mr-6">
+          <img src="/src/assets/icon-menu.svg" alt="burger-menu" />
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile Menu -->
+    <nav
+      id="burger-menu-show"
+      class="hidden font-bold absolute inset-0 bg-black/75 w-screen h-screen"
+    >
+      <div class="absolute top-0 right-0 p-6 h-full w-2/5 min-w-[220px] bg-zinc-50">
+        <button onClick="toggleHamburger();" class="flex justify-end w-full">
+          <img src="/src/assets/icon-close-menu.svg" alt="close-menu" />
+        </button>
+        <div class="flex flex-col mt-6">
+          <ul class="space-y-4">
+            <li>
+              <button
+                id="mobnav-feat-arrow"
+                onClick="toggleFeaturesMobile();"
+                class="after:content-arrowDownIcon after:inline after:w-full after:h-full"
+              >
+                Features
+              </button>
+              <ul id="mobnav-features" class="mobnav-close ml-5 my-5 space-y-4 icon-block">
+                <li>
+                  <a href="javascript:void(0);" class="hover:text-black"
+                    ><img src="/src/assets/icon-todo.svg" alt="todo" />Todo List</a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="hover:text-black"
+                    ><img src="/src/assets/icon-reminders.svg" alt="reminders" />Reminders</a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="hover:text-black"
+                    ><img src="/src/assets/icon-calendar.svg" alt="calendar" />Calendar</a
+                  >
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="hover:text-black"
+                    ><img src="/src/assets/icon-planning.svg" alt="planning" />Planning</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button
+                id="mobnav-comp-arrow"
+                onClick="toggleCompanyMobile();"
+                class="after:content-arrowDownIcon after:inline after:w-full after:h-full"
+              >
+                Company
+              </button>
+              <ul id="mobnav-company" class="mobnav-close ml-5 my-5 space-y-4 icon-block">
+                <li>
+                  <a href="javascript:void(0);" class="hover:text-black">History</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="hover:text-black">Our Team</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);" class="hover:text-black">Blog</a>
+                </li>
+              </ul>
+            </li>
+
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+          <div class="flex flex-col place-items-center space-y-4 mt-10">
+            <a href="javascript:void(0);" class="hover:text-black">Login</a>
+            <a
+              href="javascript:void(0);"
+              class="rounded-xlg border-2 border-gray-dark p-2 w-full text-center hover:text-black hover:border-black"
+              >Register</a
+            >
+          </div>
+        </div>
       </div>
     </nav>
 
@@ -60,29 +189,25 @@
             Get your team in sync, no matter your location. Streamline processes, create team
             rituals, and watch productivity soar.
           </p>
-
           <button
             class="rounded-xlg p-3 px-6 font-bold bg-black text-zinc-50 mt-6 mb-10 hover:bg-zinc-50 hover:outline hover:outline-2 hover:outline-black hover:text-black lg:mt-12"
           >
             Learn more
           </button>
-
           <!-- Clients -->
-          <div class="grid grid-cols-4 place-items-center mx-3 lg:place-items-start">
+          <div
+            class="grid grid-cols-4 place-items-center mx-3 xl:place-items-start justify-between"
+          >
             <img class="h-3.5 lg:scale-150" src="/src/assets/client-databiz.svg" />
             <img class="max-w-max h-6 lg:scale-150" src="/src/assets/client-audiophile.svg" />
-            <img class="w-min h-3.5 lg:scale-150" src="/src/assets/client-meet.svg" />
-            <img class="w-min h-4 lg:scale-150" src="/src/assets/client-maker.svg" />
+            <img class="h-3.5 lg:scale-150" src="/src/assets/client-meet.svg" />
+            <img class="h-4 lg:scale-150" src="/src/assets/client-maker.svg" />
           </div>
         </div>
-
         <!-- Right Side -->
         <div class="w-full lg:w-1/2 xl:w-2/5">
           <img class="hidden lg:block" src="/src/assets/image-hero-desktop.png" />
-
-          <div class="lg:hidden h-80 bg-cover bg-[url('/src/assets/image-hero-mobile.png')]">
-            <!-- <img class="h-80 lg:hidden bg-cover" src="/src/assets/image-hero-mobile.png" /> -->
-          </div>
+          <div class="lg:hidden h-80 bg-cover bg-[url('/src/assets/image-hero-mobile.png')]"></div>
         </div>
       </div>
     </main>
@@ -92,4 +217,5 @@
       Coded by <a href="https://github.com/aleaxim/" target="_blank">aleaxim</a>.
     </footer>
   </body>
+  <script src="src/js/script.js"></script>
 </html>
